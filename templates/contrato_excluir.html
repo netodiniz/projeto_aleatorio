@@ -1,0 +1,68 @@
+
+{% macro build_contract_ex(nome, nome_cont, datai, dataf, valor, resumo, dep, num_cont, isActive, id) %}
+
+<div class="contrato">
+    
+    <div class="campo">
+        <label class="lbnegrito" for="contrato obj"> OBJETO: </label>
+        <div class="popup lbcont" onmouseenter="myFunction()" onmouseleave="myFunction()">{{resumo[:10]}}
+            <span class="popuptext" id="myPopup">{{resumo}}</span>
+        </div>
+    </div>
+
+    <div class="campo">
+        <label class="lbnegrito" for="contrato obj"> DT INI: </label>
+        <label class="lbcont" for="contrato obj"> {{datai.strftime('%d/%m/%Y')}} </label>
+    </div>
+
+    <div class="campo">
+        <label class="lbnegrito" for="contrato obj"> DT FIM: </label>
+        <label class="lbcont" for="contrato obj"> {{dataf.strftime('%d/%m/%Y')}} </label>
+    </div>
+        
+    <div class="campo">
+        <label class="lbnegrito" for="contrato obj"> VALOR: </label>
+        <label class="lbcont" for="contrato obj"> {{valor}} </label>
+    </div>
+
+    <div class="campo">
+        <label class="lbnegrito" for="contrato obj"> NOME CONTRATO: </label>
+        <label class="lbcont" for="contrato obj"> {{nome_cont}} </label>
+    </div>
+    
+    <div class="campo">
+        <label class="lbnegrito" for="contrato obj"> EMPRESA: </label>
+        <label class="lbcont" for="contrato obj"> {{nome}} </label>
+    </div>
+
+    <div class="campo">
+        <label class="lbnegrito" for="contrato obj"> NUM. CONTRATO: </label>
+        <label class="lbcont" for="contrato obj"> {{num_cont}} </label>
+    </div>
+
+    <div class="campo">
+        <label class="lbnegrito" for="contrato obj"> DEPARTAMENTO: </label>
+        <label class="lbcont" for="contrato obj"> {{dep}} </label>
+    </div>
+
+    <div class="campo">
+        <label class="lbnegrito" for="contrato obj"> STATUS: </label>
+        <label class="lbcont" for="contrato obj"> {{isActive}} </label>
+    </div>
+
+    <form method="post">
+    <div>
+        <input type="hidden" name="id" value="{{id}}" id="id"> 
+    </div>
+    <button type="submit" class="btn btn-success">Excluir</button>
+    </form>
+</div>
+
+<script>
+    // When the user clicks on <div>, open the popup
+    function myFunction() {
+      var popup = document.getElementById("myPopup");
+      popup.classList.toggle("show");
+    }
+    </script>
+{% endmacro %}
