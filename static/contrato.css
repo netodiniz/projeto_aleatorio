@@ -1,0 +1,99 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.campo {
+    margin-left: 3px;
+    margin-right: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 17px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.lbcont {
+    width: 150px;
+    padding: 3px;
+    margin-left: 5px;
+    border: 1px solid #a1a1a1;
+    background-color: azure;
+    border-radius: 5px;
+}
+
+.lbnegrito {
+    font-weight: bold;
+}
+
+.campo:hover {
+    background: #64bb9b;
+}
+
+.contrato {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 5px;
+    margin: 20px;
+    padding: 5px;
+
+    border: 2px solid #04aa6d;
+    border-radius: 5px;
+
+    background: white
+}
+
+/* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  /* The actual popup (appears on top) */
+  .popup .popuptext {
+    visibility: hidden;
+    width: fit-content;
+    height:fit-content;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+  }
+  
+  .popuptext {
+    line-break:strict;
+    padding: 3px;
+    margin-left: 5px;
+    border: 1px solid #a1a1a1;
+    background-color: azure;
+    border-radius: 5px;
+  }
+  /* Popup arrow */
+
+  
+  /* Toggle this class when clicking on the popup container (hide and show the popup) */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+
+
