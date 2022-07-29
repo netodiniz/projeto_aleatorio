@@ -1,0 +1,17 @@
+{% macro build_input(titulo, funcao, placeh) %}
+
+<div class="searchbar">
+
+    <form class="search" method="post">
+
+        <div class="cp">
+            <label for="contrato obj" class="labelc"> {{titulo}} </label>
+
+        </div>
+        <div class="sinput">
+            <input class="form-control" type="text" name="inp" placeholder="{{placeh}}">
+        </div>
+        <button type="submit" class="btn btn-success">{{funcao}}</button>
+    </form>
+</div>
+{% endmacro %}

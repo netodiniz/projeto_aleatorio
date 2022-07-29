@@ -1,0 +1,54 @@
+
+{% macro build_contract_edit(nome, nome_cont, datai, dataf, valor, resumo, dep, num_cont, isActive, id) %}
+
+<link rel="stylesheet" href="static/cont_edit.css">
+<form method="post">
+<div class="contrato">
+    <div class="campo">
+            <label class="lbnegrito" for="contrato obj"> OBJETO: </label>
+            <input class="form-control edit" type="text" name="resumo" placeholder="{{resumo}}" id="res">
+    </div>
+
+    <div class="campo">
+        <label class="lbnegrito" for="contrato obj"> DT INI: </label>
+        <input class="form-control edit" type="text" name="datai" placeholder="{{datai  .strftime('%d/%m/%Y')}}" id="dati">
+    </div>
+
+    <div class="campo">
+        <label class="lbnegrito" for="contrato obj"> DT FIM: </label>
+        <input class="form-control edit" type="text" name="dataf" placeholder="{{dataf.strftime('%d/%m/%Y')}}" id="dataf">
+    </div>
+    
+    <div class="campo">
+        <label class="lbnegrito" for="contrato obj"> VALOR: </label>
+        <input class="form-control edit" type="text" name="valor" placeholder="{{valor}}" id="var">
+    </div>
+
+    <div class="campo">
+        <label class="lbnegrito" for="contrato obj"> NOME CONTRATO: </label>
+        <input class="form-control edit" type="text" name="nome_cont" placeholder="{{nome_cont}}" id="cnpj">
+    </div>
+    
+    <div class="campo">
+        <label class="lbnegrito" for="contrato obj"> EMPRESA: </label>
+        <input class="form-control edit" type="text" name="nome" placeholder="{{nome}}" id="nome">
+    </div>
+   
+    <div class="campo">
+        <label class="lbnegrito" for="contrato obj"> NUM. CONTRATO: </label>
+        <input class="form-control edit" type="text" name="num_cont" placeholder="{{num_cont}}" id="cod_for">
+    </div>
+   
+    <div class="campo">
+        <label class="lbnegrito" for="contrato obj"> DEPARTAMENTO: </label>
+        <input class="form-control edit" type="text" name="dep" placeholder="{{dep}}" id="cod_for">
+    </div>
+
+    <div class="campo">
+        <input type="hidden" name="id" value="{{id}}" id="id"> 
+    </div>
+
+    <button type="submit" class="btn btn-success">Atualizar</button>    
+</div>
+</form>
+{% endmacro %}
